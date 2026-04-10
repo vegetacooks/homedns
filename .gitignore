@@ -18,6 +18,9 @@ coverage/
 *.sw[a-z]
 *~
 .idea
+.env
+.env.*
+*.env
 
 # Ignore SSH or OpenVPN files
 *.ovpn
