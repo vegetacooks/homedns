@@ -1,0 +1,13 @@
+########################### NETWORKS ########################### 
+networks:
+  adguard-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
+
+########################### SERVICES ########################### 
+include:
+  - apps/adguardhome/docker-compose.yml
+
+# - apps/unbound/docker-compose.yml

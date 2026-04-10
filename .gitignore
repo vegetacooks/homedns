@@ -1,0 +1,35 @@
+# VSCode extension
+.vscode/
+/.favorites.json
+*.code-workspace
+
+# Local state files & OS specifics
+.DS_Store
+node_modules/
+lerna-debug.log
+dist/
+pack/
+.BUILD_COMPLETED
+.local-npm/
+.tools/
+coverage/
+.nyc_output
+.LAST_BUILD
+*.sw[a-z]
+*~
+.idea
+
+# Ignore SSH or OpenVPN files
+*.ovpn
+*.pem
+*.key
+
+# Ignore codex/calude files/folder
+.codex
+.claude/*
+
+# Ignore docker data, logs, secrets
+docker/appdata/*
+docker/logs/*
+docker/secrets/*
+docker/shared/certs/*

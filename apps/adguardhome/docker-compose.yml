@@ -1,0 +1,20 @@
+services:
+  adguardhome:
+    image: adguard/adguardhome:latest
+    container_name: adguardhome
+    restart: unless-stopped
+    volumes:
+      # Persist work data including query logs and filters
+      - $DOCKERDIR/appdata/adguardhome/work:/opt/adguardhome/work
+      # Persist configuration across container restarts
+      - $DOCKERDIR/appdata/adguardhome/conf:/opt/adguardhome/conf
+    ports:
+      # DNS ports - these handle all DNS queries
+      - "53:53/tcp"
+      - "53:53/udp"
+      # Web UI and API
+      - "3000:3000/tcp" # web UI (initial setup)
+      - "80:80/tcp" # web UI (after setup)
+    networks:
+      adguard-net:
+        ipv4_address: 172.20.0.3
