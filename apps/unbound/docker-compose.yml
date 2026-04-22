@@ -8,5 +8,8 @@ services:
     networks:
       adguard-net:
         ipv4_address: 172.20.0.2
+    depends_on:
+      redis:
+        condition: service_healthy
     cap_add:
       - NET_ADMIN
