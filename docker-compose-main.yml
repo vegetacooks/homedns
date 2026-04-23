@@ -10,4 +10,5 @@ networks:
 include:
   - apps/adguardhome/docker-compose.yml
   - apps/dozzle/docker-compose.yml
+  - apps/redis/docker-compose.yml
   - apps/unbound/docker-compose.yml
